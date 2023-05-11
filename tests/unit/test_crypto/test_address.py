@@ -22,9 +22,9 @@
 import json
 import unittest
 
-from c4epy.common.utils import json_encode
-from c4epy.crypto.address import Address
-from c4epy.crypto.keypairs import PublicKey
+from cosmpy_chain4energy.common.utils import json_encode
+from cosmpy_chain4energy.crypto.address import Address
+from cosmpy_chain4energy.crypto.keypairs import PublicKey
 
 
 class AddressTestCase(unittest.TestCase):
@@ -78,15 +78,15 @@ class AddressTestCase(unittest.TestCase):
 
     def test_address_from_address_with_custom_prefix(self):
         """Test create an Address from another but with a custom prefix."""
-        address = Address("fetch12hyw0z8za0sc9wwfhkdz2qrc89a87z42py23vn")
-        val_address = Address(address, prefix="fetchvaloper")
+        address = Address("c4e1t62t32vvkr78zdws3jvu9rxjkz3fy0ex4v7e7l")
+        val_address = Address(address, prefix="c4evaloper")
         self.assertEqual(
             str(val_address), "fetchvaloper12hyw0z8za0sc9wwfhkdz2qrc89a87z42yq4jl5"
         )
 
     def test_string_compatible_address(self):
         """Test address can be dumped to json using json_encode utility method."""
-        address = Address("fetch12hyw0z8za0sc9wwfhkdz2qrc89a87z42py23vn")
+        address = Address("c4e1t62t32vvkr78zdws3jvu9rxjkz3fy0ex4v7e7l")
         json_data = json_encode({"address": address})
         restored_address = Address(json.loads(json_data)["address"])
         assert restored_address == address

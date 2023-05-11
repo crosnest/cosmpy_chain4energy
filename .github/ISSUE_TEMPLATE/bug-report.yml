@@ -17,11 +17,11 @@ body:
           required: true
         - label: I checked the [documentation](http://docs.fetch.ai/CosmPy/) and found no answer to my problem.
           required: true
-        - label: I checked the C4ePy [existing issues](https://github.com/crosnest/c4epy/issues) to make sure my problem has not already been reported.
+        - label: I checked the C4ePy [existing issues](https://github.com/crosnest/cosmpy_chain4energy/issues) to make sure my problem has not already been reported.
           required: true
         - label: I checked the CosmPy [existing issues](https://github.com/fetchai/cosmpy/issues) to make sure my problem has not already been reported.
           required: true
-        - label: I have read the [code of conduct](https://github.com/crosnest/c4epy/blob/master/CODE_OF_CONDUCT.md) before creating this issue.
+        - label: I have read the [code of conduct](https://github.com/crosnest/cosmpy_chain4energy/blob/master/CODE_OF_CONDUCT.md) before creating this issue.
           required: true
   - type: textarea
     id: expected

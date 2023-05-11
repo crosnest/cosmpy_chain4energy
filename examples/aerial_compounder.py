@@ -21,10 +21,10 @@
 import argparse
 import time
 
-from c4epy.aerial.client import LedgerClient
-from c4epy.aerial.config import NetworkConfig
-from c4epy.aerial.faucet import FaucetApi
-from c4epy.aerial.wallet import LocalWallet
+from cosmpy_chain4energy.aerial.client import LedgerClient
+from cosmpy_chain4energy.aerial.config import NetworkConfig
+from cosmpy_chain4energy.aerial.faucet import FaucetApi
+from cosmpy_chain4energy.aerial.wallet import LocalWallet
 
 
 def _parse_commandline():

@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "c4epy"
+name = "cosmpy_chain4energy"
 version = "1.2.0"
 description = "A library for interacting with the chain4energy network"
 authors = ["Fetch.AI Limited", "Cros Nest B.V."]
 readme = "README.md"
 license = "Apache-2.0"
-homepage = "https://github.com/crosnest/c4epy"
-repository = "https://github.com/crosnest/c4epy"
+homepage = "https://github.com/crosnest/cosmpy_chain4energy"
+repository = "https://github.com/crosnest/cosmpy_chain4energy"
 documentation = "https://docs.fetch.ai/CosmPy/"
 keywords = ["c4epy", "Cosmos-SDK", "Chain4Energy"]
 classifiers=[
@@ -88,7 +88,7 @@ exclude = "whitelist.py"
 
 [[tool.mypy.overrides]]
 module = [
-    "c4epy.protos.*",
+    "cosmpy_chain4energy.protos.*",
 ]
 ignore_errors = true
 
@@ -122,9 +122,9 @@ order_by_type = false
 case_sensitive = true
 lines_after_imports = 2
 skip = [
-    "c4epy/protos/",
+    "cosmpy_chain4energy/protos/",
     ]
-known_first_party = "c4epy"
+known_first_party = "cosmpy_chain4energy"
 known_local_folder = "tests"
 sections = ["FUTURE",'STDLIB',"THIRDPARTY","FIRSTPARTY","LOCALFOLDER"]
 

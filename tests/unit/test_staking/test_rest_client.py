@@ -23,8 +23,8 @@ from unittest import TestCase
 
 from google.protobuf.json_format import ParseDict
 
-from c4epy.common.utils import json_encode
-from c4epy.protos.cosmos.staking.v1beta1.query_pb2 import (
+from cosmpy_chain4energy.common.utils import json_encode
+from cosmpy_chain4energy.protos.cosmos.staking.v1beta1.query_pb2 import (
     QueryDelegationRequest,
     QueryDelegationResponse,
     QueryDelegatorDelegationsRequest,
@@ -54,7 +54,7 @@ from c4epy.protos.cosmos.staking.v1beta1.query_pb2 import (
     QueryValidatorsRequest,
     QueryValidatorsResponse,
 )
-from c4epy.staking.rest_client import StakingRestClient
+from cosmpy_chain4energy.staking.rest_client import StakingRestClient
 
 from tests.helpers import MockRestClient
 

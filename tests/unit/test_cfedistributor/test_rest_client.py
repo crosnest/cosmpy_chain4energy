@@ -24,9 +24,9 @@ import unittest
 import pytest
 from google.protobuf.json_format import ParseDict
 
-from c4epy.cfedistributor.rest_client import CfeDistributorRestClient
-from c4epy.common.utils import json_encode
-from c4epy.protos.c4echain.cfedistributor.query_pb2 import (
+from cosmpy_chain4energy.cfedistributor.rest_client import CfeDistributorRestClient
+from cosmpy_chain4energy.common.utils import json_encode
+from cosmpy_chain4energy.protos.c4echain.cfedistributor.query_pb2 import (
     QueryParamsRequest,
     QueryParamsResponse,
     QueryStatesRequest,

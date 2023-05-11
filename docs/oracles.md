@@ -15,11 +15,11 @@ The scripts also require the following imports:
 ```python
 from time import sleep
 import requests
-from c4epy.aerial.client import LedgerClient, NetworkConfig
-from c4epy.aerial.contract import LedgerContract
-from c4epy.aerial.wallet import LocalWallet
-from c4epy.crypto.address import Address
-from c4epy.crypto.keypairs import PrivateKey
+from cosmpy_chain4energy.aerial.client import LedgerClient, NetworkConfig
+from cosmpy_chain4energy.aerial.contract import LedgerContract
+from cosmpy_chain4energy.aerial.wallet import LocalWallet
+from cosmpy_chain4energy.crypto.address import Address
+from cosmpy_chain4energy.crypto.keypairs import PrivateKey
 ```
 
 ## Oracle deployer and updater

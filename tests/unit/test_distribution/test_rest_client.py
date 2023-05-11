@@ -23,9 +23,9 @@ from unittest import TestCase
 
 from google.protobuf.json_format import ParseDict
 
-from c4epy.common.utils import json_encode
-from c4epy.distribution.rest_client import DistributionRestClient
-from c4epy.protos.cosmos.distribution.v1beta1.query_pb2 import (
+from cosmpy_chain4energy.common.utils import json_encode
+from cosmpy_chain4energy.distribution.rest_client import DistributionRestClient
+from cosmpy_chain4energy.protos.cosmos.distribution.v1beta1.query_pb2 import (
     QueryCommunityPoolResponse,
     QueryDelegationRewardsRequest,
     QueryDelegationRewardsResponse,

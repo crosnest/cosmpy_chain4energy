@@ -14,8 +14,8 @@ C4E_URL := https://github.com/chain4energy/c4e-chain
 C4E_VERSION := v1.2.0
 C4E_DIR := build/c4e-proto-schema
 
-C4EPY_PROTOS_DIR := c4epy/protos
-C4EPY_SRC_DIR := c4epy
+C4EPY_PROTOS_DIR := cosmpy_chain4energy/protos
+C4EPY_SRC_DIR := cosmpy_chain4energy
 C4EPY_TESTS_DIR := tests
 C4EPY_EXAMPLES_DIR := examples
 C4EPY_SCRIPTS_DIR := scripts

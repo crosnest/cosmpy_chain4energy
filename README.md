@@ -32,7 +32,7 @@ based on the CosmPy library
 ## To Install
 
 ```bash
-pip3 install c4epy
+pip3 install cosmpy_chain4energy
 ```
 
 ## Getting Started
@@ -40,7 +40,7 @@ pip3 install c4epy
 Below is a simple example for querying an account's balances:
 
 ```python
-from c4epy.aerial.client import LedgerClient, NetworkConfig
+from cosmpy_chain4energy.aerial.client import LedgerClient, NetworkConfig
 
 # connect to Fetch.ai network using default parameters
 ledger_client = LedgerClient(NetworkConfig.chain4energy_mainnet())
@@ -59,13 +59,13 @@ The Cosmpy documentation can be found [here](https://docs.fetch.ai/CosmPy/).
 
 ## Examples
 
-Under the `examples` directory, you can find examples of basic ledger interactions using `c4epy`, such as transferring tokens, staking.
+Under the `examples` directory, you can find examples of basic ledger interactions using `cosmpy_chain4energy`, such as transferring tokens, staking.
 
 ## Contributing
 
 All contributions are very welcome! Remember, contribution is not only PRs and code, but any help with docs or helping other developers solve their issues are very appreciated!
 
-Read below to learn how you can take part in the CosmPy or derivative projects like c4epy.
+Read below to learn how you can take part in the CosmPy or derivative projects like cosmpy_chain4energy.
 
 ### Code of Conduct
 
@@ -87,8 +87,8 @@ We use [GitHub Issues][issues] for tracking requests and bugs.
 
 The C4ePy and CosmPy projects are licensed under [Apache License 2.0][license].
 
-[contributing]: https://github.com/crosnest/c4epy/blob/master/CONTRIBUTING.md
-[developing]: https://github.com/crosnest/c4epy/blob/master/DEVELOPING.md
-[coc]: https://github.com/crosnest/c4epy/blob/master/CODE_OF_CONDUCT.md
-[issues]: https://github.com/crosnest/c4epy/issues
-[license]: https://github.com/crosnest/c4epy/blob/master/LICENSE
+[contributing]: https://github.com/crosnest/cosmpy_chain4energy/blob/master/CONTRIBUTING.md
+[developing]: https://github.com/crosnest/cosmpy_chain4energy/blob/master/DEVELOPING.md
+[coc]: https://github.com/crosnest/cosmpy_chain4energy/blob/master/CODE_OF_CONDUCT.md
+[issues]: https://github.com/crosnest/cosmpy_chain4energy/issues
+[license]: https://github.com/crosnest/cosmpy_chain4energy/blob/master/LICENSE
