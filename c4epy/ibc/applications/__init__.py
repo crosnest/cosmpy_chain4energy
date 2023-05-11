@@ -17,33 +17,4 @@
 #
 # ------------------------------------------------------------------------------
 
-"""Osmosis tx test."""
-
-from c4epy.aerial.client import LedgerClient
-from c4epy.aerial.wallet import LocalWallet
-
-from tests.integration.osmosis_testnet.net_config import FaucetMixIn, NET_CONFIG
-from tests.integration.test_tx import TestTx as BaseTestTx
-
-
-class TestTx(BaseTestTx, FaucetMixIn):
-    """Osmosis Transaction test
-
-    :param BaseTestTx: Base test transaction
-    :param FaucetMixIn: Osmosis testnet Faucet config
-    """
-
-    COIN = "uosmo"
-    GAS_LIMIT = 120000
-    PREFIX = "osmo"
-
-    def get_wallet_1(self):
-        wallet = LocalWallet.generate(prefix=self.PREFIX)
-        self.ask_funds(wallet)
-        return wallet
-
-    def get_wallet_2(self):
-        return LocalWallet.generate(prefix=self.PREFIX)
-
-    def get_ledger(self):
-        return LedgerClient(NET_CONFIG)
+"""This package contains the IBC modules."""

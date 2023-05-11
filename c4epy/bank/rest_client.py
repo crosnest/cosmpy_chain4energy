@@ -18,7 +18,6 @@
 # ------------------------------------------------------------------------------
 
 """Implementation of Bank interface using REST."""
-
 from google.protobuf.json_format import Parse
 
 from c4epy.bank.interface import Bank

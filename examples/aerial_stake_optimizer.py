@@ -62,7 +62,7 @@ def main():
     faucet_api = FaucetApi(NetworkConfig.chain4energy_stable_testnet())
 
     # Set initial stake and desired stake period
-    initial_stake = 50000000000000000000
+    initial_stake = 50000000
     total_period = 60000
 
     req = QueryValidatorsRequest()
@@ -135,7 +135,7 @@ def main():
 
     while alice_balance < initial_stake:
         print("Providing wealth to alice...")
-        faucet_api.get_wealth(alice.address())
+        faucet_api.get_wealth(alice.address(), "100000000uc4e")
         alice_balance = ledger.query_bank_balance(alice.address())
 
     tx = Transaction()

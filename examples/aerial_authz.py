@@ -76,7 +76,7 @@ def main():
 
     while wallet_balance < (amount):
         print("Providing wealth to wallet...")
-        faucet_api.get_wealth(wallet.address())
+        faucet_api.get_wealth(wallet.address(), "100000000uc4e")
         wallet_balance = ledger.query_bank_balance(wallet.address())
 
     spend_amount = Coin(amount=str(amount), denom="uc4e")

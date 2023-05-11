@@ -39,7 +39,7 @@ class TestTx:
 
     def _get_network_config(self):
         """Get network config."""
-        return NetworkConfig.chain4energy_stable_testnet()
+        return NetworkConfig.chain4energy_integration_testnet()
 
     def get_ledger(self):
         """Get Ledger"""
@@ -49,7 +49,7 @@ class TestTx:
         """Get wallet 1."""
         faucet_api = FaucetApi(self._get_network_config())
         wallet1 = LocalWallet.generate()
-        faucet_api.get_wealth(wallet1.address())
+        faucet_api.get_wealth(wallet1.address(), "100000000uc4e")
         return wallet1
 
     def get_wallet_2(self):
@@ -84,16 +84,16 @@ class TestTx:
 
 
 class TestTxRestAPI(TestTx):
-    """Test dorado rest api"""
+    """Test c4echain rest api"""
 
     def _get_network_config(self):
         return NetworkConfig(
-            chain_id="dorado-1",
-            url="rest+https://lcd-testnet.c4e.io:443",
+            chain_id="c4echain",
+            url="rest+http://127.0.0.1:1317",
             fee_minimum_gas_price=0.025,
             fee_denomination="uc4e",
             staking_denomination="uc4e",
-            faucet_url=None,
+            faucet_url="http://127.0.0.1:4500",
         )
 
 

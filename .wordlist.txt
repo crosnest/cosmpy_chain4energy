@@ -305,3 +305,9 @@ formatters
 ci
 nfunc
 chain4energy
+veles
+epy
+ePy
+dapie
+cros
+Pierret

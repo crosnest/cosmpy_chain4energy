@@ -18,7 +18,6 @@
 # ------------------------------------------------------------------------------
 
 """Implementation of Evidence interface using REST."""
-
 from google.protobuf.json_format import Parse
 
 from c4epy.common.rest_client import RestClient
@@ -53,7 +52,7 @@ class EvidenceRestClient(Evidence):
         :return: QueryEvidenceResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/evidence/{request.evidence_hash}",
+            f"{self.API_URL}/evidence/{request.evidence_hash!r}",
         )
         return Parse(json_response, QueryEvidenceResponse())
 

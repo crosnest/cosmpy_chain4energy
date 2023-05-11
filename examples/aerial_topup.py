@@ -81,7 +81,7 @@ def main():
 
     while wallet_balance < (10**18):
         print("Providing wealth to wallet...")
-        faucet_api.get_wealth(authz_wallet.address())
+        faucet_api.get_wealth(authz_wallet.address(), "100000000uc4e")
         wallet_balance = ledger.query_bank_balance(authz_wallet.address())
 
     ledger = LedgerClient(NetworkConfig.latest_stable_testnet())

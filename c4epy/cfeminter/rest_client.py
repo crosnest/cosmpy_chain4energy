@@ -18,13 +18,10 @@
 # ------------------------------------------------------------------------------
 
 """Implementation of cfedistributor interface using REST."""
-import json
-
 from google.protobuf.json_format import Parse
 
 from c4epy.cfeminter.interface import CfeMinter
 from c4epy.common.rest_client import RestClient
-from c4epy.common.utils import json_encode
 from c4epy.protos.c4echain.cfeminter.query_pb2 import (
     QueryInflationRequest,
     QueryInflationResponse,
@@ -79,14 +76,4 @@ class CfeMinterRestClient(CfeMinter):
         :return: QueryStatesResponse
         """
         json_response = self._rest_api.get(f"{self.API_URL}/state")
-        # todo: to remove when v1.2.0 come to production
-        j = json.loads(json_response)
-        remainder_from_previous_period = j["minter_state"][
-            "remainder_from_previous_period"
-        ]
-        del j["minter_state"]["remainder_from_previous_period"]
-        j["minter_state"][
-            "remainder_from_previous_minter"
-        ] = remainder_from_previous_period
-        json_response = json_encode(j).encode("utf-8")
         return Parse(json_response, QueryStateResponse())

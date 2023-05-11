@@ -18,7 +18,6 @@
 # ------------------------------------------------------------------------------
 
 """Implementation of cfedistributor interface using REST."""
-
 from google.protobuf.json_format import Parse
 
 from c4epy.cfevesting.interface import CfeVesting

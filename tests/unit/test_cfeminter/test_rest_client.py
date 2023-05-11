@@ -58,7 +58,6 @@ class CfeMinterRestClientTestCase(unittest.TestCase):
     @staticmethod
     def test_query_state():
         """Test query account for positive result."""
-        # todo: remove expected_content/content when v1.2.0 is on production
         expected_content = {
             "minter_state": {
                 "sequence_id": 1,
@@ -69,19 +68,9 @@ class CfeMinterRestClientTestCase(unittest.TestCase):
             },
             "state_history": [],
         }
-        content = {
-            "minter_state": {
-                "sequence_id": 1,
-                "amount_minted": "1038506205638",
-                "remainder_to_mint": "0.174259132506908003",
-                "last_mint_block_time": "2023-04-05T21:56:35.429380906Z",
-                "remainder_from_previous_period": "0.000000000000000000",
-            },
-            "state_history": [],
-        }
         expected_response = ParseDict(expected_content, QueryStateResponse())
 
-        mock_client = MockRestClient(json_encode(content))
+        mock_client = MockRestClient(json_encode(expected_content))
         minter = CfeMinterRestClient(mock_client)
 
         assert minter.State(QueryStateRequest()) == expected_response
@@ -90,26 +79,22 @@ class CfeMinterRestClientTestCase(unittest.TestCase):
     @staticmethod
     def test_query_params():
         """Test query params for positive result."""
-        # todo: change content with v1.2.0 content
         content = {
             "params": {
                 "mint_denom": "uc4e",
-                "minter_config": {
-                    "start_time": "2023-02-17T12:00:00Z",
-                    "minters": [
-                        {
-                            "sequence_id": 1,
-                            "end_time": None,
-                            "type": "EXPONENTIAL_STEP_MINTING",
-                            "linear_minting": None,
-                            "exponential_step_minting": {
-                                "amount": "32000000000000",
-                                "step_duration": "126230400s",
-                                "amount_multiplier": "0.500000000000000000",
-                            },
-                        }
-                    ],
-                },
+                "start_time": "2023-02-17T12:00:00Z",
+                "minters": [
+                    {
+                        "sequence_id": 1,
+                        "end_time": None,
+                        "config": {
+                            "@type": "/chain4energy.c4echain.cfeminter.ExponentialStepMinting",
+                            "step_duration": "126230400s",
+                            "amount": "32000000000000",
+                            "amount_multiplier": "0.500000000000000000",
+                        },
+                    }
+                ],
             }
         }
         expected_response = ParseDict(content, QueryParamsResponse())

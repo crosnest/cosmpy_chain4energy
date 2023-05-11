@@ -18,7 +18,6 @@
 # ------------------------------------------------------------------------------
 
 """Implementation of cfesignature interface using REST."""
-
 from google.protobuf.json_format import Parse
 
 from c4epy.cfesignature.interface import CfeSignature
@@ -93,7 +92,7 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryCreateStorageKeyResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/create_storage_key/{request.targetAccAddress}/{request.referenceId}"
+            f"{self.API_URL}/create_storage_key/{request.target_acc_address}/{request.reference_id}"
         )
         return Parse(json_response, QueryCreateStorageKeyResponse())
 
@@ -108,7 +107,7 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryCreateReferencePayloadLinkResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/create_reference_payload_link/{request.referenceId}/{request.payloadHash}"
+            f"{self.API_URL}/create_reference_payload_link/{request.reference_id}/{request.payload_hash}"
         )
         return Parse(json_response, QueryCreateReferencePayloadLinkResponse())
 
@@ -123,7 +122,7 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryVerifySignatureResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/verify_signature/{request.referenceId}/{request.targetAccAddress}"
+            f"{self.API_URL}/verify_signature/{request.reference_id}/{request.target_acc_address}"
         )
         return Parse(json_response, QueryVerifySignatureResponse())
 
@@ -138,7 +137,7 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryGetAccountInfoResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/get_account_info/{request.accAddressString}"
+            f"{self.API_URL}/get_account_info/{request.acc_address_string}"
         )
         return Parse(json_response, QueryGetAccountInfoResponse())
 
@@ -153,7 +152,7 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryVerifyReferencePayloadLinkResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/verify_reference_payload_link/{request.referenceId}/{request.payloadHash}"
+            f"{self.API_URL}/verify_reference_payload_link/{request.reference_id}/{request.payload_hash}"
         )
         return Parse(json_response, QueryVerifyReferencePayloadLinkResponse())
 
@@ -168,6 +167,6 @@ class CfeSignatureRestClient(CfeSignature):
         :return: QueryGetReferencePayloadLinkResponse
         """
         json_response = self._rest_api.get(
-            f"{self.API_URL}/get_reference_payload_link/{request.referenceId}"
+            f"{self.API_URL}/get_reference_payload_link/{request.reference_id}"
         )
         return Parse(json_response, QueryGetReferencePayloadLinkResponse())
