@@ -19,7 +19,9 @@
 """Distribution."""
 
 from cosmpy_chain4energy.crypto.address import Address
-from cosmpy_chain4energy.protos.cosmos.distribution.v1beta1.tx_pb2 import MsgWithdrawDelegatorReward
+from cosmpy_chain4energy.protos.cosmos.distribution.v1beta1.tx_pb2 import (
+    MsgWithdrawDelegatorReward,
+)
 
 
 def create_withdraw_delegator_reward(delegator: Address, validator: Address):

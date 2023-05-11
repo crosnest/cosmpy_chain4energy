@@ -30,7 +30,9 @@ import certifi
 import grpc
 
 from cosmpy_chain4energy.aerial.client.bank import create_bank_send_msg
-from cosmpy_chain4energy.aerial.client.distribution import create_withdraw_delegator_reward
+from cosmpy_chain4energy.aerial.client.distribution import (
+    create_withdraw_delegator_reward,
+)
 from cosmpy_chain4energy.aerial.client.staking import (
     ValidatorStatus,
     create_delegate_msg,
@@ -57,12 +59,16 @@ from cosmpy_chain4energy.distribution.rest_client import DistributionRestClient
 from cosmpy_chain4energy.params.rest_client import ParamsRestClient
 from cosmpy_chain4energy.protos.cosmos.auth.v1beta1.auth_pb2 import BaseAccount
 from cosmpy_chain4energy.protos.cosmos.auth.v1beta1.query_pb2 import QueryAccountRequest
-from cosmpy_chain4energy.protos.cosmos.auth.v1beta1.query_pb2_grpc import QueryStub as AuthGrpcClient
+from cosmpy_chain4energy.protos.cosmos.auth.v1beta1.query_pb2_grpc import (
+    QueryStub as AuthGrpcClient,
+)
 from cosmpy_chain4energy.protos.cosmos.bank.v1beta1.query_pb2 import (
     QueryAllBalancesRequest,
     QueryBalanceRequest,
 )
-from cosmpy_chain4energy.protos.cosmos.bank.v1beta1.query_pb2_grpc import QueryStub as BankGrpcClient
+from cosmpy_chain4energy.protos.cosmos.bank.v1beta1.query_pb2_grpc import (
+    QueryStub as BankGrpcClient,
+)
 from cosmpy_chain4energy.protos.cosmos.crypto.ed25519.keys_pb2 import (  # noqa # pylint: disable=unused-import
     PubKey,
 )
@@ -72,7 +78,9 @@ from cosmpy_chain4energy.protos.cosmos.distribution.v1beta1.query_pb2 import (
 from cosmpy_chain4energy.protos.cosmos.distribution.v1beta1.query_pb2_grpc import (
     QueryStub as DistributionGrpcClient,
 )
-from cosmpy_chain4energy.protos.cosmos.params.v1beta1.query_pb2 import QueryParamsRequest
+from cosmpy_chain4energy.protos.cosmos.params.v1beta1.query_pb2 import (
+    QueryParamsRequest,
+)
 from cosmpy_chain4energy.protos.cosmos.params.v1beta1.query_pb2_grpc import (
     QueryStub as QueryParamsGrpcClient,
 )
@@ -90,7 +98,9 @@ from cosmpy_chain4energy.protos.cosmos.tx.v1beta1.service_pb2 import (
     GetTxRequest,
     SimulateRequest,
 )
-from cosmpy_chain4energy.protos.cosmos.tx.v1beta1.service_pb2_grpc import ServiceStub as TxGrpcClient
+from cosmpy_chain4energy.protos.cosmos.tx.v1beta1.service_pb2_grpc import (
+    ServiceStub as TxGrpcClient,
+)
 from cosmpy_chain4energy.staking.rest_client import StakingRestClient
 from cosmpy_chain4energy.tx.rest_client import TxRestClient
 

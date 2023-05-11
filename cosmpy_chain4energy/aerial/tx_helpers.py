@@ -24,7 +24,11 @@ from dataclasses import dataclass
 from datetime import timedelta
 from typing import Dict, List, Optional, Union
 
-from cosmpy_chain4energy.aerial.exceptions import BroadcastError, InsufficientFeesError, OutOfGasError
+from cosmpy_chain4energy.aerial.exceptions import (
+    BroadcastError,
+    InsufficientFeesError,
+    OutOfGasError,
+)
 
 
 @dataclass

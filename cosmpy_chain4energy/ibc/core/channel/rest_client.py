@@ -20,7 +20,9 @@
 from google.protobuf.json_format import Parse
 
 from cosmpy_chain4energy.common.rest_client import RestClient
-from cosmpy_chain4energy.ibc.core.channel.interface import IBCCoreChannel  # type: ignore
+from cosmpy_chain4energy.ibc.core.channel.interface import (
+    IBCCoreChannel,  # type: ignore
+)
 from cosmpy_chain4energy.protos.ibc.core.channel.v1.query_pb2 import (
     QueryChannelClientStateRequest,
     QueryChannelClientStateResponse,

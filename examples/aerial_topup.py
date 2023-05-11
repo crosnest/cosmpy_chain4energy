@@ -24,7 +24,9 @@ import time
 from google.protobuf import any_pb2
 
 from cosmpy_chain4energy.aerial.client import LedgerClient, NetworkConfig
-from cosmpy_chain4energy.aerial.client.utils import prepare_and_broadcast_basic_transaction
+from cosmpy_chain4energy.aerial.client.utils import (
+    prepare_and_broadcast_basic_transaction,
+)
 from cosmpy_chain4energy.aerial.faucet import FaucetApi
 from cosmpy_chain4energy.aerial.tx import Transaction
 from cosmpy_chain4energy.aerial.wallet import LocalWallet
